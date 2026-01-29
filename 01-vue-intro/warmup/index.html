@@ -5,6 +5,8 @@
     <title>01-vue</title>
     <!-- https://vuejs.org/guide/quick-start.html#using-vue-from-cdn -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- import vue -->
+
     <style>
       .container {
         display: flex;
@@ -42,7 +44,18 @@
   <body>
     <div id="app">
       <!-- TODO: Add buttons and counters -->
+      <div>
+        <button @click="butt1clicked">1</button>
+        <button @click="butt2clicked">2</button>
+        <div class = "container">
+          <div id="counter1">{{ counter[0] }}</div>
+          <div id="counter2">{{ counter[1] }}</div>
+          <div id="counter-total">{{ counter[2] }}</div>
+        </div>
+      </div>
     </div>
     <script type="module" src="./warmup.js"></script>
+    <!-- declaring these as modules: things declared in one file are not shown in other files. -->
+    <!-- prevents overwriting/changing of variables defined in other files -->
   </body>
 </html>
